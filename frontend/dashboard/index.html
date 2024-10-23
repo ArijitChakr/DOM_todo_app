@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>todo-app</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="navbar-container">
+        <div class="navbar-heading-options">
+          <h1>Taskit</h1>
+          <h3 id="user-name"></h3>
+        </div>
+        <div class="navbar-buttons">
+          <button id="dark-light-button"></button>
+          <button id="logout-button">Logout</button>
+        </div>
+      </div>
+      <div class="create-todo">
+        <div id="create-todo-form-container">
+          <label name="todo-title" for="create-todo-title">Title</label>
+          <input id="create-todo-title" type="text" placeholder="Task title" />
+          <label name="todo-description" for="create-todo-description"
+            >Description</label
+          >
+          <input
+            id="create-todo-description"
+            type="text"
+            placeholder="Describe the task"
+          />
+          <label name="todo-duedate" for="create-todo-duedate">Due date</label>
+          <input id="create-todo-duedate" type="datetime-local" />
+
+          <button id="save-task-button">Save Task</button>
+        </div>
+      </div>
+      <div class="todo-dashboard-container">
+        <div class="dashboard-heading-container">
+          <h4 id="task-type">Pending tasks</h4>
+          <select id="task-options">
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+        <div class="dashboard-todo-container pending">
+          <h4 class="no-todos">
+            No Pending tasks available, please add a task to view
+          </h4>
+        </div>
+        <div class="dashboard-todo-container completed hidden">
+          <h4 class="no-todos">
+            No Task has been completed yet, please completed a task to view here
+          </h4>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
